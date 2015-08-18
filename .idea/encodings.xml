@@ -5,6 +5,7 @@
     <file url="file://$PROJECT_DIR$/library_base/src/main/java/com/lemon/library/progress/CircularProgressBar.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/library_base/src/main/java/com/lemon/library/progress/CircularProgressBarUtils.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/library_base/src/main/java/com/lemon/library/progress/CircularProgressDrawable.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/library_base/src/main/java/com/lemon/library/widgets/XSwipeRefreshLayout.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/library_base/src/main/res/values/attrs.xml" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/library_base/src/main/res/values/defaults.xml" charset="UTF-8" />
   </component>
