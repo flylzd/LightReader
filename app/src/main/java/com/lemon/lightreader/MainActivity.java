@@ -1,17 +1,77 @@
 package com.lemon.lightreader;
 
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+import android.widget.TextView;
+
+import com.lemon.library.eventbus.EventCenter;
+import com.lemon.lightreader.base.BaseActivity;
+
+import butterknife.Bind;
+import butterknife.OnClick;
 
 
-public class MainActivity extends ActionBarActivity {
+public class MainActivity extends BaseActivity {
+
+    @Bind(R.id.tvTest)
+    TextView tvText;
+
+    @Bind(R.id.btnOK)
+    Button btnOK;
+
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+    protected void initViewsAndEvents() {
+
+
+    }
+
+    @OnClick(R.id.btnOK)
+    public void sumbit() {
+
+        tvText.setText("ieieieeieiei");
+    }
+
+    @Override
+    protected int getContentViewLayoutID() {
+        return R.layout.activity_main;
+    }
+
+    @Override
+    protected void getBundleExtras(Bundle extras) {
+    }
+
+    @Override
+    protected boolean isBindEventBus() {
+        return false;
+    }
+
+    @Override
+    protected void onEventComming(EventCenter eventCenter) {
+
+    }
+
+    @Override
+    protected boolean toggleOverridePendingTransition() {
+        return false;
+    }
+
+    @Override
+    protected TransitionMode getOverridePendingTransitionMode() {
+        return null;
+    }
+
+    @Override
+    protected View getLoadingTargetView() {
+        return null;
+    }
+
+    @Override
+    protected boolean isApplyStatusBarTranslucency() {
+        return true;
     }
 
     @Override

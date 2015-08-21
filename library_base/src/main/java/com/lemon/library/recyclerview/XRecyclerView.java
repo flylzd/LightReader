@@ -59,9 +59,9 @@ public class XRecyclerView extends LinearLayout {
 
         mRecyclerView.setHasFixedSize(true);
 //        setLinearLayout();
-        // ÉèÖÃItemÔö¼Ó¡¢ÒÆ³ı¶¯»­
+        // è®¾ç½®Itemå¢åŠ ã€ç§»é™¤åŠ¨ç”»
         mRecyclerView.setItemAnimator(new DefaultItemAnimator());
-        //Ìí¼Ó·Ö¸îÏß
+        //æ·»åŠ åˆ†å‰²çº¿
         //mRecyclerView.addItemDecoration(new DividerItemDecoration(
         //getActivity(), DividerItemDecoration.HORIZONTAL_LIST));
         mRecyclerView.addOnScrollListener(new RecyclerView.OnScrollListener() {
@@ -84,13 +84,13 @@ public class XRecyclerView extends LinearLayout {
                     firstVisibleItem = linearLayoutManager.findFirstCompletelyVisibleItemPosition();
                 } else if (layoutManager instanceof GridLayoutManager) {
                     GridLayoutManager gridLayoutManager = ((GridLayoutManager) layoutManager);
-                    //Í¨¹ıLayoutManagerÕÒµ½µ±Ç°ÏÔÊ¾µÄ×îºóµÄitemµÄposition
+                    //é€šè¿‡LayoutManageræ‰¾åˆ°å½“å‰æ˜¾ç¤ºçš„æœ€åçš„itemçš„position
                     lastVisibleItem = gridLayoutManager.findLastVisibleItemPosition();
                     firstVisibleItem = gridLayoutManager.findFirstCompletelyVisibleItemPosition();
                 } else if (layoutManager instanceof StaggeredGridLayoutManager) {
                     StaggeredGridLayoutManager staggeredGridLayoutManager = ((StaggeredGridLayoutManager) layoutManager);
-                    //ÒòÎªStaggeredGridLayoutManagerµÄÌØÊâĞÔ¿ÉÄÜµ¼ÖÂ×îºóÏÔÊ¾µÄitem´æÔÚ¶à¸ö£¬ËùÒÔÕâÀïÈ¡µ½µÄÊÇÒ»¸öÊı×é
-                    //µÃµ½Õâ¸öÊı×éºóÔÙÈ¡µ½Êı×éÖĞpositionÖµ×î´óµÄÄÇ¸ö¾ÍÊÇ×îºóÏÔÊ¾µÄpositionÖµÁË
+                    //å› ä¸ºStaggeredGridLayoutManagerçš„ç‰¹æ®Šæ€§å¯èƒ½å¯¼è‡´æœ€åæ˜¾ç¤ºçš„itemå­˜åœ¨å¤šä¸ªï¼Œæ‰€ä»¥è¿™é‡Œå–åˆ°çš„æ˜¯ä¸€ä¸ªæ•°ç»„
+                    //å¾—åˆ°è¿™ä¸ªæ•°ç»„åå†å–åˆ°æ•°ç»„ä¸­positionå€¼æœ€å¤§çš„é‚£ä¸ªå°±æ˜¯æœ€åæ˜¾ç¤ºçš„positionå€¼äº†
                     int[] lastPositions = new int[((StaggeredGridLayoutManager) layoutManager).getSpanCount()];
                     staggeredGridLayoutManager.findLastVisibleItemPositions(lastPositions);
                     lastVisibleItem = findMax(lastPositions);
@@ -105,7 +105,7 @@ public class XRecyclerView extends LinearLayout {
                 }
 
                 /**
-                 * ÎŞÂÛË®Æ½»¹ÊÇ´¹Ö±
+                 * æ— è®ºæ°´å¹³è¿˜æ˜¯å‚ç›´
                  */
                 if (!isRefresh() && isLoadMoreEnabled() && (lastVisibleItem >= totalItemCount - 1)
                         && !isLoadMore() && (dx > 0 || dy > 0)) {
@@ -117,7 +117,7 @@ public class XRecyclerView extends LinearLayout {
     }
 
     /**
-     * ÏßĞÔ²¼¾Ö¹ÜÀíÆ÷
+     * çº¿æ€§å¸ƒå±€ç®¡ç†å™¨
      */
     public void setLinearLayoutManager() {
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(mContext);
@@ -126,25 +126,25 @@ public class XRecyclerView extends LinearLayout {
     }
 
     /**
-     * Íø¸ñ²¼¾Ö¹ÜÀíÆ÷
+     * ç½‘æ ¼å¸ƒå±€ç®¡ç†å™¨
      */
     public void setGridLayoutManager() {
         GridLayoutManager gridLayoutManager = new GridLayoutManager(mContext, 2);
         gridLayoutManager.setOrientation(LinearLayoutManager.VERTICAL);
-        // ÉèÖÃ²¼¾Ö¹ÜÀíÆ÷
+        // è®¾ç½®å¸ƒå±€ç®¡ç†å™¨
         mRecyclerView.setLayoutManager(gridLayoutManager);
     }
 
     /**
-     * ½»´íÍø¸ñ²¼¾Ö¹ÜÀíÆ÷
+     * äº¤é”™ç½‘æ ¼å¸ƒå±€ç®¡ç†å™¨
      */
     public void setStaggeredGridLayoutManager() {
         StaggeredGridLayoutManager staggeredGridLayoutManager = new StaggeredGridLayoutManager(2, LinearLayoutManager.VERTICAL);
-        // ÉèÖÃ²¼¾Ö¹ÜÀíÆ÷
+        // è®¾ç½®å¸ƒå±€ç®¡ç†å™¨
         mRecyclerView.setLayoutManager(staggeredGridLayoutManager);
     }
 
-    //ÕÒµ½Êı×éÖĞµÄ×î´óÖµ
+    //æ‰¾åˆ°æ•°ç»„ä¸­çš„æœ€å¤§å€¼
     private int findMax(int[] lastPositions) {
 
         int max = lastPositions[0];
@@ -190,7 +190,7 @@ public class XRecyclerView extends LinearLayout {
     }
 
     /**
-     * ¼ÓÔØ¸ü¶àÍê±Ï,Îª·ÀÖ¹Æµ·±ÍøÂçÇëÇó,isLoadMoreÎªfalse²Å¿ÉÔÙ´ÎÇëÇó¸ü¶àÊı¾İ
+     * åŠ è½½æ›´å¤šå®Œæ¯•,ä¸ºé˜²æ­¢é¢‘ç¹ç½‘ç»œè¯·æ±‚,isLoadMoreä¸ºfalseæ‰å¯å†æ¬¡è¯·æ±‚æ›´å¤šæ•°æ®
      */
     public void setCompleted() {
         isRefresh = false;
@@ -199,7 +199,6 @@ public class XRecyclerView extends LinearLayout {
         isLoadMore = false;
         mFooterView.setVisibility(View.GONE);
     }
-
 
     public void scrollToTop() {
         mRecyclerView.scrollToPosition(0);
