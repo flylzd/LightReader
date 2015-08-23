@@ -1,16 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding">
-    <file url="file://$PROJECT_DIR$/app/src/main/java/com/lemon/lightreader/MainActivity.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/lemon/lightreader/api/UriHelper.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/lemon/lightreader/base/BaseFragment.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/lemon/lightreader/bean/BaseEntity.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/lemon/lightreader/bean/ImagesListEntity.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/lemon/lightreader/bean/NavigationEntity.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/lemon/lightreader/bean/ResponseImagesListEntity.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/lemon/lightreader/ui/activity/MainActivity.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/lemon/lightreader/ui/fragment/ImagesListFragment.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/lemon/lightreader/utils/ImageLoaderHelper.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable-nodpi" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable-xhdpi/ic_nav_music.png" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable-xhdpi/ic_nav_news.png" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable-xhdpi/ic_nav_picture.png" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable-xhdpi/ic_nav_video.png" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_images.xml" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_images_list.xml" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_news.xml" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_videos.xml" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_videos_list.xml" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/layout/list_item_images_list.xml" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/layout/list_item_navigation.xml" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/values/fonts.xml" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/library_base/src/main/java/com/lemon/library/netstatus" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/library_base/src/main/java/com/lemon/library/progress/CircularProgressBar.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/library_base/src/main/java/com/lemon/library/progress/CircularProgressBarUtils.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/library_base/src/main/java/com/lemon/library/progress/CircularProgressDrawable.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/library_base/src/main/java/com/lemon/library/recyclerview/XRecyclerView.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/library_base/src/main/java/com/lemon/library/varyview/IVaryViewHelper.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/library_base/src/main/java/com/lemon/library/varyview/VaryViewHelper.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/library_base/src/main/java/com/lemon/library/varyview/VaryViewHelperController.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/library_base/src/main/java/com/lemon/library/varyview/VaryViewHelperX.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/library_base/src/main/java/com/lemon/library/widgets/XSwipeRefreshLayout.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/library_base/src/main/res/layout/loading.xml" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/library_base/src/main/res/values/arrays.xml" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/library_base/src/main/res/values/attrs.xml" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/library_base/src/main/res/values/defaults.xml" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/library_base/src/main/res/values/dimens.xml" charset="UTF-8" />

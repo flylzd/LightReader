@@ -1,9 +1,10 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    android:layout_height="match_parent">
+    android:orientation="vertical">
 
     <include
         android:id="@+id/common_toolbar"
@@ -11,29 +12,46 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 
+    <android.support.v4.widget.DrawerLayout
+        android:id="@+id/main_drawer"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
 
-    <!--<com.lemon.library.progress.CircularProgressBar-->
-        <!--android:id="@+id/loading_progress"-->
-        <!--android:layout_width="35dp"-->
-        <!--android:layout_height="35dp"-->
-        <!--android:indeterminate="true"-->
-        <!--android:layout_centerHorizontal="true"-->
-        <!--android:layout_centerVertical="true"-->
-        <!--android:indeterminateOnly="false"-->
-        <!--app:cpb_colors="@array/gplus_colors"/>-->
+        <com.lemon.library.widgets.XViewPager
+            android:id="@+id/main_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
 
-    <TextView
-        android:id="@+id/tvTest"
-        android:layout_centerVertical="true"
-        android:layout_width="wrap_content"
-        android:text="3kdkddkdk"
-        android:layout_height="wrap_content" />
+        <RelativeLayout
+            android:layout_width="220dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="left">
 
-    <Button
-        android:layout_width="wrap_content"
-        android:text="点击"
-        android:id="@+id/btnOK"
-        android:layout_below="@+id/tvTest"
-        android:layout_height="wrap_content" />
+            <ImageView
+                android:id="@+id/main_navigation_top_image"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_alignParentTop="true"
+                android:clickable="true"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:scaleType="centerCrop"
+                android:src="@drawable/banner"/>
 
-</RelativeLayout>
+            <ListView
+                android:id="@+id/main_navigation_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/main_navigation_top_image"
+                android:background="@android:color/white"
+                android:cacheColorHint="@android:color/transparent"
+                android:divider="@null"
+                android:choiceMode="singleChoice"
+                android:dividerHeight="0dp"
+                android:overScrollMode="never"
+                android:scrollbars="none"/>
+        </RelativeLayout>
+
+    </android.support.v4.widget.DrawerLayout>
+</LinearLayout>

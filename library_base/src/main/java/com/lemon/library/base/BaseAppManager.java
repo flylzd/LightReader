@@ -17,7 +17,6 @@ public class BaseAppManager {
     private static Stack<Activity> activityStack;
     private static BaseAppManager instance;
 
-
     private BaseAppManager() {
     }
 

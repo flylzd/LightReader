@@ -5,9 +5,11 @@ import android.content.pm.PackageManager;
 
 import com.lemon.lightreader.api.ApiHttpClient;
 import com.lemon.lightreader.base.BaseApplication;
+import com.lemon.lightreader.utils.ImageLoaderHelper;
 import com.lemon.lightreader.utils.StringUtils;
 import com.loopj.android.http.AsyncHttpClient;
 import com.loopj.android.http.PersistentCookieStore;
+import com.nostra13.universalimageloader.core.ImageLoader;
 import com.umeng.analytics.MobclickAgent;
 
 import java.util.Properties;
@@ -42,6 +44,9 @@ public class AppContext extends BaseApplication {
         client.setCookieStore(myCookieStore);
         ApiHttpClient.setHttpClient(client);
         ApiHttpClient.setCookie(ApiHttpClient.getCookie(this));
+
+        ImageLoader.getInstance().init(ImageLoaderHelper.getInstance(this).getImageLoaderConfiguration(AppConfig.DEFAULT_SAVE_IMAGE_PATH));
+
     }
 
     /**

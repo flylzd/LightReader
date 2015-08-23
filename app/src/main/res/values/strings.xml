@@ -1,6 +1,7 @@
 <resources>
-    <string name="app_name">"LightReader "</string>
+    <string name="app_name">"轻阅读"</string>
 
-    <string name="hello_world">Hello world!</string>
-    <string name="action_settings">Settings</string>
+    <string name="drawer_open">DrawerOpen</string>
+    <string name="drawer_close">DrawerClose</string>
+
 </resources>

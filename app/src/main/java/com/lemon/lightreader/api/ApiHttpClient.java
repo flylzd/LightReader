@@ -117,7 +117,7 @@ public class ApiHttpClient {
     public static void setHttpClient(AsyncHttpClient c) {
         client = c;
         client.addHeader("Accept-Language", Locale.getDefault().toString());
-        client.addHeader("Host", HOST);
+//        client.addHeader("Host", HOST);
         client.addHeader("Connection", "Keep-Alive");
         client.getHttpClient().getParams()
                 .setParameter(ClientPNames.ALLOW_CIRCULAR_REDIRECTS, true);

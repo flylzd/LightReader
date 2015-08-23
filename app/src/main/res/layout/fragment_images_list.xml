@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <com.lemon.library.recyclerview.XRecyclerView
+        android:id="@+id/xRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </com.lemon.library.recyclerview.XRecyclerView>
+
+    <!--<com.github.obsessive.library.widgets.XSwipeRefreshLayout-->
+        <!--android:id="@+id/fragment_images_list_swipe_layout"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent">-->
+
+        <!--<com.github.obsessive.simplifyreader.widgets.PLALoadMoreListView-->
+            <!--android:id="@+id/fragment_images_list_list_view"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:cacheColorHint="@android:color/transparent"-->
+            <!--android:divider="@null"-->
+            <!--android:dividerHeight="0dp"-->
+            <!--android:listSelector="@android:color/transparent"-->
+            <!--android:overScrollMode="never"-->
+            <!--android:fadingEdge="none"-->
+            <!--android:fadingEdgeLength="0dp"-->
+            <!--android:scrollbars="none"-->
+            <!--app:plaColumnNumber="2" />-->
+    <!--</com.github.obsessive.library.widgets.XSwipeRefreshLayout>-->
+
+</LinearLayout>

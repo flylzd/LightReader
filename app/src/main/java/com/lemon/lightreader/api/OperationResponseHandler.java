@@ -22,24 +22,24 @@ public class OperationResponseHandler extends AsyncHttpResponseHandler {
 	}
 
 	@Override
-	public void onFailure(int arg0, Header[] arg1, byte[] arg2, Throwable arg3) {
-		onFailure(arg0, arg3.getMessage(), args);
+	public void onFailure(int code, Header[] headers, byte[] responseBytes, Throwable throwable) {
+		onFailure(code, throwable.getMessage(), args);
 	}
 
-	public void onFailure(int code, String errorMessage, Object[] args) {
+	public void onFailure(int code, String errorMessage, Object[] responseBytes) {
 	}
 
 	@Override
-	public void onSuccess(int arg0, Header[] arg1, byte[] arg2) {
+	public void onSuccess(int code, Header[] headers, byte[] responseBytes) {
 		try {
-			onSuccess(arg0, new ByteArrayInputStream(arg2), args);
+			onSuccess(code, new ByteArrayInputStream(responseBytes), args);
 		} catch (Exception e) {
 			e.printStackTrace();
-			onFailure(arg0, e.getMessage(), args);
+			onFailure(code, e.getMessage(), args);
 		}
 	}
 
-	public void onSuccess(int code, ByteArrayInputStream is, Object[] args)
+	public void onSuccess(int code, ByteArrayInputStream is, Object[] responseBytes)
 			throws Exception {
 
 	}

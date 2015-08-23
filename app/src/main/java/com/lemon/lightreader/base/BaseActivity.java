@@ -16,7 +16,7 @@ import butterknife.ButterKnife;
  */
 public abstract class BaseActivity extends BaseAppCompatActivity {
 
-    protected Toolbar mToolbar;
+    private Toolbar mToolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,6 +49,10 @@ public abstract class BaseActivity extends BaseAppCompatActivity {
     protected void onPause() {
         super.onPause();
         MobclickAgent.onPause(this);
+    }
+
+    protected Toolbar getToolbar() {
+        return mToolbar;
     }
 
     public void showError(String msg) {

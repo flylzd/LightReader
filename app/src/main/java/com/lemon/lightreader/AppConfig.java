@@ -30,14 +30,14 @@ public class AppConfig {
     public final static String DEFAULT_SAVE_IMAGE_PATH = Environment
             .getExternalStorageDirectory()
             + File.separator
-            + "OSChina"
-            + File.separator + "osc_img" + File.separator;
+            + "LightReader"
+            + File.separator + "images" + File.separator;
 
     // 默认存放文件下载的路径
     public final static String DEFAULT_SAVE_FILE_PATH = Environment
             .getExternalStorageDirectory()
             + File.separator
-            + "OSChina"
+            + "LightReader"
             + File.separator + "download" + File.separator;
 
     private Context mContext;
